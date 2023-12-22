@@ -20,7 +20,7 @@ def is_enabled(value, default):
 SESSION = environ.get('SESSION', 'Media_search')
 API_ID = int(environ.get('API_ID', '27710337'))
 API_HASH = environ.get('API_HASH', '354e1dd8e1e3041ee2145196da8d6aac')
-BOT_TOKEN = environ.get('BOT_TOKEN', "6774587301:AAEMVexVkaiqCbsukY3_xMh1F12lVjKDOEc")
+BOT_TOKEN = environ.get('BOT_TOKEN', "6345951921:AAE8hUDQRHJw371AACUEkLcSbticYyhJ6Bk")
 
 # Bot settings
 CACHE_TIME = int(environ.get('CACHE_TIME', 1800))
@@ -38,7 +38,7 @@ auth_users = [int(user) if id_pattern.search(user) else user for user in environ
 AUTH_USERS = (auth_users + ADMINS) if auth_users else []
 PREMIUM_USER = [int(user) if id_pattern.search(user) else user for user in environ.get('PREMIUM_USER', '').split()]
 auth_channel = environ.get('AUTH_CHANNEL')
-auth_grp = environ.get('AUTH_GROUP', '-1001953643341')
+auth_grp = environ.get('AUTH_GROUP')
 AUTH_CHANNEL = int(auth_channel) if auth_channel and id_pattern.search(auth_channel) else None
 AUTH_GROUPS = [int(ch) for ch in auth_grp.split()] if auth_grp else None
 support_chat_id = environ.get('SUPPORT_CHAT_ID', '')
@@ -48,12 +48,12 @@ SUPPORT_CHAT_ID = int(support_chat_id) if support_chat_id and id_pattern.search(
 NO_RESULTS_MSG = bool(environ.get("NO_RESULTS_MSG", False))
 
 # MongoDB information
-DATABASE_URI = environ.get('DATABASE_URI', "mongodb+srv://tejaschavan1110:0Ax1QKLgiqkRqlvo@cluster0.olswtbo.mongodb.net/?retryWrites=true&w=majority")
+DATABASE_URI = environ.get('DATABASE_URI', "mongodb+srv://tejaschavan1110:3f5SQjNyZJ9bIALV@cluster0.rkkvbgj.mongodb.net/?retryWrites=true&w=majority")
 DATABASE_NAME = environ.get('DATABASE_NAME', "vkbotsthalpathy")
 COLLECTION_NAME = environ.get('COLLECTION_NAME', 'Telegram_files')
 
 # Others
-VERIFY = bool(environ.get('VERIFY', False))
+VERIFY = bool(environ.get('VERIFY', True))
 SHORTLINK_URL = environ.get('SHORTLINK_URL', 'links4money.com')
 SHORTLINK_API = environ.get('SHORTLINK_API', '946bc80cac29b81097c66ddec155c9ac8113f592')
 IS_SHORTLINK = bool(environ.get('IS_SHORTLINK', True))
